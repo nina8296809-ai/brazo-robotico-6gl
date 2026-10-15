@@ -1,0 +1,20 @@
+{
+  "actual": "2026_II",
+  "semestres": {
+    "2022_II": {
+      "resumen": "Diagnóstico inicial, bitácoras, diagramas, primer programa de secuencia en el PIC (MPLAB X), datasheets y videos. Archivos en Google Drive."
+    },
+    "2023_I": {
+      "resumen": "Programas, documentación generada y videos de funcionamiento. Archivos en Google Drive."
+    },
+    "2023_II": {
+      "resumen": "Trabajo de dos equipos (E1 y E2) y laboratorio del brazo. Archivos en Google Drive."
+    },
+    "2026_I": {
+      "resumen": "Laboratorios 1 a 7, simulador del brazo, mantenimiento, manuales y presentaciones. Archivos en Google Drive."
+    },
+    "2026_II": {
+      "resumen": "Semestre en curso. Revisión de componentes, mapeo de pines del PIC16F1946, diagrama de estados y pruebas en lazo abierto."
+    }
+  }
+}
