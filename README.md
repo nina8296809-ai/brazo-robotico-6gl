@@ -45,3 +45,8 @@ Cómo subir archivos y mantener la página: [`config/README.md`](config/README.m
 Asignaturas: ETN-902 Sistemas de Control II, ETN-1034 Aplicación de Técnicas de Control y ETN-1000 Bases de Datos.
 
 El sitio web y el generador del catálogo están basados en los de la [planta XK-335B](https://github.com/miguelangel2107/maqueta-manufactura-xk335b).
+## Equipo
+
+- Docente: Ing. Jorge Antonio Nava Amador
+- Auxiliares: Univ. Franz Choque, Univ. Fabian Manuel Plata Vargas, Univ. Limber Ajnota Cahuaya
+- Estudiantes: Diego Josué Nina Fernández, Giovanni Alexander Villca Yarari, Christian Yamil Gutierrez Ponce, Daniela Jhanin Callata Bautista, Natalia Katerina Morales Corico, Cristhian Daniel Cari Uluri
