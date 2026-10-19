@@ -42,6 +42,6 @@ El detalle de cada pin está en [`semestres/2026_II/mapeo-hardware`](semestres/2
 
 Cómo subir archivos y mantener la página: [`config/README.md`](config/README.md).
 
-Asignatura: ETN-902 Sistemas de Control II.
+Asignaturas: ETN-902 Sistemas de Control II, ETN-1034 Aplicación de Técnicas de Control y ETN-1000 Bases de Datos.
 
 El sitio web y el generador del catálogo están basados en los de la [planta XK-335B](https://github.com/miguelangel2107/maqueta-manufactura-xk335b).
