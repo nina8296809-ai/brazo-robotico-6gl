@@ -190,13 +190,13 @@
   // ---------------------------------------------------------------- listas (documentos / programas)
   const LISTAS = {
     documentos: {
-      base: ARCHIVOS.filter(a => !a.recurso && !['programa', 'imagen', 'video'].includes(a.categoria)),
+      base: ARCHIVOS.filter(a => !a.recurso && !['programa', 'basedatos', 'imagen', 'video'].includes(a.categoria)),
       grupo: a => a.categoria,
       etiquetaGrupo: k => C.categorias[k] || k,
       estado: { q: '', sem: C.actual, est: 'all', cat: 'all', limite: 60 }
     },
     codigos: {
-      base: ARCHIVOS.filter(a => !a.recurso && a.categoria === 'programa'),
+      base: ARCHIVOS.filter(a => !a.recurso && ['programa', 'basedatos'].includes(a.categoria)),
       grupo: a => a.lenguaje,
       etiquetaGrupo: k => k,
       estado: { q: '', sem: C.actual, est: 'all', cat: 'all', limite: 60 }
@@ -312,7 +312,7 @@
     const carpeta = carpetaDe(a.ruta);
     const est = a.estaciones.length >= TOTAL_EJES ? '<span class="chip">Todos los ejes</span>'
       : a.estaciones.map(id => `<span class="chip">Eje ${id} · ${esc((EST.get(id) || { nombre: id }).nombre)}</span>`).join('');
-    const etiqueta = a.categoria === 'programa' ? a.lenguaje : C.categorias[a.categoria];
+    const etiqueta = a.categoria === 'programa' || a.categoria === 'basedatos' ? a.lenguaje : C.categorias[a.categoria];
     return `
       <article class="card">
         <div class="card-top">
@@ -641,7 +641,7 @@
   let abiertoDesdeApp = false;
   let graficoCsv = null;
 
-  const LENG_HLJS = { c: 'c', h: 'c', py: 'python', m: 'matlab', js: 'javascript', css: 'css', json: 'json', xml: 'xml', cpp: 'cpp', hpp: 'cpp', ino: 'cpp', bat: 'dos' };
+  const LENG_HLJS = { c: 'c', h: 'c', py: 'python', sql: 'sql', m: 'matlab', js: 'javascript', css: 'css', json: 'json', xml: 'xml', cpp: 'cpp', hpp: 'cpp', ino: 'cpp', bat: 'dos' };
 
   async function abrirVisor(a) {
     $('#visorTitulo').textContent = a.titulo || a.nombre;
@@ -871,7 +871,8 @@
   }
 
   function irA(h, sinScroll) {
-    const [vista, ...resto] = h.split('/');    const nombre = ['inicio', 'documentos', 'codigos', 'galeria', 'simulador', 'repositorio'].includes(vista) ? vista : 'inicio';
+    const [vista, ...resto] = h.split('/');
+    const nombre = ['inicio', 'documentos', 'codigos', 'galeria', 'simulador', 'repositorio'].includes(vista) ? vista : 'inicio';
     vistaBase = nombre === 'repositorio' && resto.length ? 'repositorio/' + resto.join('/') : nombre;
     mostrarVista(nombre);
     if (nombre === 'documentos' || nombre === 'codigos') pintarLista(nombre);

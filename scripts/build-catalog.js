@@ -53,6 +53,7 @@ const CATEGORIAS = {
   enlace: 'Software y enlaces',
   otro: 'Otros',
   programa: 'Programas',
+  basedatos: 'Base de datos',
   imagen: 'Imágenes',
   video: 'Videos'
 };
@@ -66,7 +67,8 @@ const LENGUAJES = {
   m: 'MATLAB', mlx: 'MATLAB', slx: 'Simulink',
   pdsprj: 'Proteus', dsn: 'Proteus',
   js: 'Web', html: 'Web', css: 'Web',
-  bat: 'Script'
+  bat: 'Script',
+  sql: 'SQL'
 };
 
 // Carpetas que solo contienen recursos de otro archivo (imágenes de un .md,
@@ -95,7 +97,7 @@ const VISTAS = {
   png: 'imagen', jpg: 'imagen', jpeg: 'imagen', gif: 'imagen', bmp: 'imagen', webp: 'imagen', svg: 'imagen',
   mp4: 'video', webm: 'video',
   c: 'texto', h: 'texto', asm: 'texto', hex: 'texto',
-  py: 'texto', m: 'texto', txt: 'texto', json: 'texto',
+  py: 'texto', m: 'texto', sql: 'texto', txt: 'texto', json: 'texto',
   js: 'texto', css: 'texto', cpp: 'texto', hpp: 'texto', ino: 'texto', xml: 'texto', bat: 'texto'
 };
 
@@ -163,6 +165,7 @@ function clasificar(rel, ext, partes, externo) {
   }
   if (partes[0] === 'global' && partes[1] === 'datasheets') return 'datasheet';
   if (partes[0] === 'global' && partes[1] === 'manuales') return 'manual';
+  if (ext === 'sql') return 'basedatos';
   if (EXT.modelo3d.includes(ext) || (ext === 'dwg' && /(^|[\/_ -])3d|modelos-3d|cad_3d/.test(p))) return 'modelo3d';
   if (EXT.imagen.includes(ext)) return 'imagen';
   if (EXT.video.includes(ext)) return 'video';
@@ -246,7 +249,7 @@ function construir() {
     if (extra.descripcion) item.descripcion = extra.descripcion;
     if (extra.orden != null) item.orden = extra.orden;
     if (recurso) item.recurso = true;
-    if (categoria === 'programa') item.lenguaje = LENGUAJES[ext] || ext.toUpperCase();
+    if (categoria === 'programa' || categoria === 'basedatos') item.lenguaje = LENGUAJES[ext] || ext.toUpperCase();
     if (externo) item.externo = externo;
     else if (ext === 'html') item.vista = 'web';
     else if (VISTAS[ext]) item.vista = VISTAS[ext];
