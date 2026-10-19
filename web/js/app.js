@@ -871,12 +871,15 @@
   }
 
   function irA(h, sinScroll) {
-    const [vista, ...resto] = h.split('/');
-    const nombre = ['inicio', 'documentos', 'codigos', 'galeria', 'repositorio'].includes(vista) ? vista : 'inicio';
+    const [vista, ...resto] = h.split('/');    const nombre = ['inicio', 'documentos', 'codigos', 'galeria', 'simulador', 'repositorio'].includes(vista) ? vista : 'inicio';
     vistaBase = nombre === 'repositorio' && resto.length ? 'repositorio/' + resto.join('/') : nombre;
     mostrarVista(nombre);
     if (nombre === 'documentos' || nombre === 'codigos') pintarLista(nombre);
     if (nombre === 'galeria') pintarGaleria();
+    if (nombre === 'simulador') {
+      const f = $('#simFrame');
+      if (!f.getAttribute('src')) f.src = f.dataset.src; // se carga solo la primera vez que se abre
+    }
     if (nombre === 'repositorio') pintarRepositorio(resto.join('/'));
     pintado[nombre] = true;
     if (!sinScroll) window.scrollTo(0, 0);
