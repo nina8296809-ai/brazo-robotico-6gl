@@ -1,31 +1,88 @@
 {
-  "semestres/2026_II/mapeo-hardware/mapeo_pines_pic16f1946.md": {
-    "titulo": "Mapeo de pines del PIC16F1946",
-    "descripcion": "Salidas a los drivers de cada eje, sensores de efecto Hall, finales de carrera y tablero del operador.",
-    "estaciones": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6
-    ],
+  "global/datasheets/pic16f1946_datasheet.pdf": {
+    "titulo": "Microcontrolador PIC16F1946 - hoja de datos",
+    "descripcion": "Memoria, puertos de E/S, temporizadores y módulos CCP/PWM del microcontrolador que controla el brazo.",
+    "estaciones": [1, 2, 3, 4, 5, 6],
     "orden": 1
   },
-  "semestres/2026_II/diagramas/diagrama_estados.md": {
-    "titulo": "Diagrama de estados del firmware (borrador)",
-    "descripcion": "Modos manual y automático, homing y secuencias. Borrador a verificar con el código.",
-    "estaciones": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6
-    ],
-    "orden": 2
+  "global/software/instalacion_software_brazo.md": {
+    "titulo": "Instalación del software del brazo",
+    "descripcion": "MPLAB X v5.10, compilador PICC 9.83 (HI-TECH) y PICkit 3 Programmer v3.10.",
+    "categoria": "manual"
   },
   "global/software/plantilla_enlace_drive.html": {
     "oculto": true
+  },
+
+  "semestres/2026_II/guias/Guia_Laboratorio_1.pdf": { "titulo": "Guía de laboratorio 1", "orden": 1 },
+  "semestres/2026_II/guias/Guia_Laboratorio_2.pdf": { "titulo": "Guía de laboratorio 2", "orden": 2 },
+  "semestres/2026_II/guias/Guia_Laboratorio_3.pdf": { "titulo": "Guía de laboratorio 3", "orden": 3 },
+  "semestres/2026_II/guias/Guia_Laboratorio_4.pdf": { "titulo": "Guía de laboratorio 4", "orden": 4 },
+  "semestres/2026_II/guias/Guia_Laboratorio_5.pdf": { "titulo": "Guía de laboratorio 5", "orden": 5 },
+  "semestres/2026_II/guias/Guia_Laboratorio_6.pdf": { "titulo": "Guía de laboratorio 6", "orden": 6 },
+  "semestres/2026_II/guias/Guia_Laboratorio_7.pdf": { "titulo": "Guía de laboratorio 7", "orden": 7 },
+  "semestres/2026_II/guias/Guia_Laboratorio_8.pdf": { "titulo": "Guía de laboratorio 8", "orden": 8 },
+
+  "semestres/2026_II/informes/Informe_Laboratorio_1.pdf": {
+    "titulo": "Informe del Laboratorio 1",
+    "descripcion": "Laboratorio 1, presentado el 24/08/2026.",
+    "orden": 1
+  },
+  "semestres/2026_II/informes/Informe_Laboratorio_2.pdf": {
+    "titulo": "Informe del Laboratorio 2",
+    "orden": 2
+  },
+  "semestres/2026_II/informes/latex/": {
+    "oculto": true
+  },
+
+  "semestres/2026_II/mapeo-hardware/mapeo_pines_pic16f1946.md": {
+    "titulo": "Mapeo de pines del PIC16F1946",
+    "descripcion": "Salidas a los drivers de cada eje, sensores de efecto Hall, finales de carrera y tablero del operador.",
+    "estaciones": [1, 2, 3, 4, 5, 6],
+    "orden": 1
+  },
+  "semestres/2026_II/mapeo-hardware/mapa_conexiones.pdf": {
+    "titulo": "Mapa de conexiones del brazo",
+    "estaciones": [1, 2, 3, 4, 5, 6],
+    "orden": 2
+  },
+  "semestres/2026_II/mapeo-hardware/mapa_conexiones.eddx": {
+    "titulo": "Mapa de conexiones del brazo (EdrawMax)",
+    "categoria": "mapeo",
+    "estaciones": [1, 2, 3, 4, 5, 6],
+    "orden": 3
+  },
+
+  "semestres/2026_II/diagramas/diagrama_estados.md": {
+    "titulo": "Diagrama de estados del firmware (borrador)",
+    "descripcion": "Modos manual y automático, homing y secuencias. Borrador a verificar con el código.",
+    "estaciones": [1, 2, 3, 4, 5, 6],
+    "orden": 2
+  },
+
+  "semestres/2026_II/planos/electrico/": {
+    "estaciones": [1, 2, 3, 4, 5, 6]
+  },
+  "semestres/2026_II/planos/electrico/plano_electrico_motores.pdf": { "titulo": "Plano eléctrico - Motores y drivers" },
+  "semestres/2026_II/planos/electrico/plano_electrico_motores.dwg": { "titulo": "Plano eléctrico - Motores y drivers" },
+  "semestres/2026_II/planos/electrico/plano_electrico_placa.pdf": { "titulo": "Plano eléctrico - Placa del PIC" },
+  "semestres/2026_II/planos/electrico/plano_electrico_placa.dwg": { "titulo": "Plano eléctrico - Placa del PIC" },
+  "semestres/2026_II/planos/electrico/plano_electrico_pulsadores.pdf": { "titulo": "Plano eléctrico - Tablero de pulsadores" },
+  "semestres/2026_II/planos/electrico/plano_electrico_pulsadores.dwg": { "titulo": "Plano eléctrico - Tablero de pulsadores" },
+  "semestres/2026_II/planos/pid/pid_brazo_6gl.dwg": {
+    "titulo": "P&ID del brazo de 6 GL",
+    "estaciones": [1, 2, 3, 4, 5, 6]
+  },
+
+  "semestres/2026_II/ingenieria-inversa/fotos/brazo_vista_general.png": {
+    "titulo": "Vista general del brazo",
+    "estaciones": [1, 2, 3, 4, 5, 6]
+  },
+  "semestres/2026_II/ingenieria-inversa/fotos/conector_50_pines.png": {
+    "titulo": "Conector de 50 pines"
+  },
+  "semestres/2026_II/ingenieria-inversa/fotos/placa_pic16f1946.jpg": {
+    "titulo": "Placa del PIC16F1946"
   }
 }
