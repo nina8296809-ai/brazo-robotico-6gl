@@ -1,9 +1,0 @@
-_UART2_Text: CODE, 1431 0 25
-_Manual_Control: CODE, 1773 0 275
-_UART2_Write: CODE, 1387 0 12
-_main: CODE, 1515 0 51
-_PWM_init: CODE, 1482 0 33
-_IO_init: CODE, 1456 0 26
-_UART2_Init: CODE, 1414 0 17
-_PC_Control: CODE, 1566 0 207
-Total: 646
